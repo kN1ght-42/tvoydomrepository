@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/css/index.css" />
+    </head>
+
+    <svg display="none">
+        <symbol id="arrow" viewBox="0 0 24 24">
+            <path
+                d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
+            ></path>
+        </symbol>
+        <symbol id="article" viewBox="0 0 20 22">
+            <path
+                d="M15 21.8002H4.99995C2.39995 21.8002 0.199951 19.7002 0.199951 17.0002V5.0002C0.199951 2.4002 2.29995 0.200195 4.99995 0.200195H15C17.6 0.200195 19.7999 2.3002 19.7999 5.0002V17.0002C19.7999 19.6002 17.6 21.8002 15 21.8002ZM4.99995 1.8002C3.19995 1.8002 1.79995 3.2002 1.79995 5.0002V17.0002C1.79995 18.8002 3.29995 20.2002 4.99995 20.2002H15C16.8 20.2002 18.2 18.7002 18.2 17.0002V5.0002C18.2 3.2002 16.7 1.8002 15 1.8002H4.99995Z"
+            />
+            <path
+                d="M5.99995 15.2002C5.59995 15.2002 5.19995 15.5002 5.19995 16.0002C5.19995 16.5002 5.49995 16.8002 5.99995 16.8002V15.2002ZM9.99995 16.8002C10.4 16.8002 10.8 16.5002 10.8 16.0002C10.8 15.5002 10.5 15.2002 9.99995 15.2002V16.8002ZM5.99995 16.8002H9.99995V15.3002H5.99995V16.8002ZM5.99995 10.2002C5.59995 10.2002 5.19995 10.5002 5.19995 11.0002C5.19995 11.5002 5.49995 11.8002 5.99995 11.8002V10.2002ZM14 11.8002C14.4 11.8002 14.8 11.5002 14.8 11.0002C14.8 10.5002 14.5 10.2002 14 10.2002V11.8002ZM5.99995 11.8002H14V10.3002H5.99995V11.8002ZM5.99995 5.2002C5.59995 5.2002 5.19995 5.6002 5.19995 6.0002C5.19995 6.4002 5.59995 6.8002 5.99995 6.8002V5.2002ZM14 6.8002C14.4 6.8002 14.8 6.5002 14.8 6.0002C14.8 5.5002 14.4 5.2002 14 5.2002V6.8002ZM5.99995 6.8002H14V5.2002H5.99995V6.8002Z"
+            />
+        </symbol>
+        <symbol id="video" viewBox="0 0 14 16">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.25 3.44597C0.25 1.33497 2.531 0.0109725 4.364 1.05897L12.334 5.61197C14.181 6.66797 14.181 9.33197 12.334 10.388L4.364 14.941C2.531 15.989 0.25 14.665 0.25 12.554V3.44597ZM3.62 2.36097C3.42993 2.2524 3.21467 2.19564 2.99578 2.19638C2.77688 2.19712 2.56202 2.25533 2.37268 2.36519C2.18334 2.47504 2.02618 2.63269 1.9169 2.82236C1.80762 3.01203 1.75007 3.22707 1.75 3.44597V12.554C1.75007 12.7729 1.80762 12.9879 1.9169 13.1776C2.02618 13.3673 2.18334 13.5249 2.37268 13.6348C2.56202 13.7446 2.77688 13.8028 2.99578 13.8036C3.21467 13.8043 3.42993 13.7475 3.62 13.639L11.589 9.08497C12.429 8.60497 12.429 7.39497 11.589 6.91497L3.62 2.36097Z"
+            />
+        </symbol>
+        <symbol id="photo" viewBox="0 0 22 20">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.07 1.75C8.86419 1.75005 8.66158 1.80092 8.48015 1.89809C8.29873 1.99525 8.1441 2.13572 8.03 2.307L6.624 4.416C6.55552 4.51873 6.46273 4.60297 6.35388 4.66124C6.24502 4.7195 6.12347 4.74999 6 4.75H5C4.13805 4.75 3.3114 5.09241 2.7019 5.7019C2.09241 6.3114 1.75 7.13805 1.75 8V15C1.75 15.862 2.09241 16.6886 2.7019 17.2981C3.3114 17.9076 4.13805 18.25 5 18.25H17C17.862 18.25 18.6886 17.9076 19.2981 17.2981C19.9076 16.6886 20.25 15.862 20.25 15V8C20.25 7.13805 19.9076 6.3114 19.2981 5.7019C18.6886 5.09241 17.862 4.75 17 4.75H16C15.8765 4.74999 15.755 4.7195 15.6461 4.66124C15.5373 4.60297 15.4445 4.51873 15.376 4.416L13.97 2.306C13.8558 2.1349 13.7011 1.99464 13.5197 1.89765C13.3383 1.80066 13.1357 1.74994 12.93 1.75H9.07ZM6.782 1.475C7.03307 1.09825 7.37327 0.789313 7.7724 0.575615C8.17154 0.361917 8.61726 0.250069 9.07 0.25H12.93C13.85 0.25 14.708 0.71 15.218 1.475L16.4 3.25H17C18.2598 3.25 19.468 3.75045 20.3588 4.64124C21.2496 5.53204 21.75 6.74022 21.75 8V15C21.75 16.2598 21.2496 17.468 20.3588 18.3588C19.468 19.2496 18.2598 19.75 17 19.75H5C3.74022 19.75 2.53204 19.2496 1.64124 18.3588C0.750445 17.468 0.25 16.2598 0.25 15V8C0.25 6.74022 0.750445 5.53204 1.64124 4.64124C2.53204 3.75045 3.74022 3.25 5 3.25H5.599L6.782 1.475ZM11 9.25C10.4033 9.25 9.83097 9.48705 9.40901 9.90901C8.98705 10.331 8.75 10.9033 8.75 11.5C8.75 12.0967 8.98705 12.669 9.40901 13.091C9.83097 13.5129 10.4033 13.75 11 13.75C11.5967 13.75 12.169 13.5129 12.591 13.091C13.0129 12.669 13.25 12.0967 13.25 11.5C13.25 10.9033 13.0129 10.331 12.591 9.90901C12.169 9.48705 11.5967 9.25 11 9.25ZM7.25 11.5C7.25 10.5054 7.64509 9.55161 8.34835 8.84835C9.05161 8.14509 10.0054 7.75 11 7.75C11.9946 7.75 12.9484 8.14509 13.6517 8.84835C14.3549 9.55161 14.75 10.5054 14.75 11.5C14.75 12.4946 14.3549 13.4484 13.6517 14.1517C12.9484 14.8549 11.9946 15.25 11 15.25C10.0054 15.25 9.05161 14.8549 8.34835 14.1517C7.64509 13.4484 7.25 12.4946 7.25 11.5Z"
+            />
+            <path
+                d="M12 4C12 4.26522 11.8946 4.51957 11.7071 4.70711C11.5196 4.89464 11.2652 5 11 5C10.7348 5 10.4804 4.89464 10.2929 4.70711C10.1054 4.51957 10 4.26522 10 4C10 3.73478 10.1054 3.48043 10.2929 3.29289C10.4804 3.10536 10.7348 3 11 3C11.2652 3 11.5196 3.10536 11.7071 3.29289C11.8946 3.48043 12 3.73478 12 4Z"
+            />
+        </symbol>
+
+        <symbol id="view" viewBox="0 0 18 14">
+            <path
+                d="M16.1559 8.35817C14.5393 10.059 11.9001 12.2082 9.0001 12.2082V13.4582C12.4593 13.4582 15.4184 10.9482 17.0618 9.21984L16.1559 8.35817ZM9.0001 12.2082C6.1001 12.2082 3.46094 10.059 1.84427 8.35817L0.938435 9.21984C2.58177 10.9482 5.54177 13.4582 9.0001 13.4582V12.2082ZM1.84427 5.6415C3.46094 3.94067 6.1001 1.7915 9.0001 1.7915V0.541504C5.54094 0.541504 2.58177 3.0515 0.938435 4.77984L1.84427 5.6415ZM9.0001 1.7915C11.9001 1.7915 14.5393 3.94067 16.1559 5.6415L17.0618 4.77984C15.4184 3.0515 12.4584 0.541504 9.0001 0.541504V1.7915ZM1.84427 8.35817C1.48999 7.99478 1.2917 7.50735 1.2917 6.99984C1.2917 6.49233 1.48999 6.0049 1.84427 5.6415L0.938435 4.77984C0.363074 5.37565 0.0415039 6.17157 0.0415039 6.99984C0.0415039 7.82811 0.363074 8.62403 0.938435 9.21984L1.84427 8.35817ZM17.0618 9.21984C17.6371 8.62403 17.9579 7.82811 17.9579 6.99984C17.9579 6.17157 17.6371 5.37565 17.0618 4.77984L16.1559 5.6415C16.8926 6.4165 16.8926 7.58317 16.1559 8.35817L17.0618 9.21984ZM10.8751 6.99984C10.8751 7.49712 10.6776 7.97403 10.3259 8.32566C9.9743 8.67729 9.49738 8.87484 9.0001 8.87484V10.1248C9.8289 10.1248 10.6238 9.7956 11.2098 9.20955C11.7959 8.6235 12.1251 7.82864 12.1251 6.99984H10.8751ZM9.0001 8.87484C8.50282 8.87484 8.02591 8.67729 7.67428 8.32566C7.32265 7.97403 7.1251 7.49712 7.1251 6.99984H5.8751C5.8751 7.82864 6.20434 8.6235 6.79039 9.20955C7.37644 9.7956 8.1713 10.1248 9.0001 10.1248V8.87484ZM7.1251 6.99984C7.1251 6.50256 7.32265 6.02564 7.67428 5.67401C8.02591 5.32238 8.50282 5.12484 9.0001 5.12484V3.87484C8.1713 3.87484 7.37644 4.20408 6.79039 4.79013C6.20434 5.37618 5.8751 6.17104 5.8751 6.99984H7.1251ZM9.0001 5.12484C9.49738 5.12484 9.9743 5.32238 10.3259 5.67401C10.6776 6.02564 10.8751 6.50256 10.8751 6.99984H12.1251C12.1251 6.17104 11.7959 5.37618 11.2098 4.79013C10.6238 4.20408 9.8289 3.87484 9.0001 3.87484V5.12484Z"
+                fill="#939393"
+            />
+        </symbol>
+        <symbol id="like" viewBox="0 0 18 16">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.91675 2.16644C3.85675 2.16644 2.33341 4.14477 2.33341 6.13311C2.33341 7.08477 2.70841 8.04311 3.34258 8.97727C3.97591 9.91061 4.83925 10.7748 5.73341 11.5189C6.51487 12.1645 7.34142 12.7535 8.20675 13.2814C8.53008 13.4798 8.80341 13.6339 9.00008 13.7398C9.19675 13.6339 9.47008 13.4798 9.79341 13.2814C10.6587 12.7535 11.4853 12.1645 12.2667 11.5189C13.1609 10.7748 14.0234 9.91061 14.6576 8.97727C15.2926 8.04311 15.6667 7.08561 15.6667 6.13311C15.6667 4.14477 14.1434 2.16644 12.0834 2.16644C10.8801 2.16644 10.1009 2.75811 9.63091 3.30227C9.55268 3.39291 9.45584 3.46562 9.34698 3.51546C9.23813 3.5653 9.11981 3.59109 9.00008 3.59109C8.88036 3.59109 8.76204 3.5653 8.65318 3.51546C8.54432 3.46562 8.44748 3.39291 8.36925 3.30227C7.89925 2.75811 7.12008 2.16644 5.91675 2.16644ZM0.666748 6.13311C0.666748 3.48811 2.69341 0.499773 5.91675 0.499773C7.27508 0.499773 8.29008 1.00977 9.00008 1.59561C9.86545 0.876346 10.9582 0.487966 12.0834 0.499773C15.3067 0.499773 17.3334 3.48811 17.3334 6.13311C17.3334 7.52727 16.7867 8.80811 16.0367 9.91394C15.2851 11.0206 14.2976 11.9973 13.3334 12.7998C12.4897 13.4973 11.5971 14.1337 10.6626 14.7039C10.2951 14.9289 9.98175 15.1056 9.75258 15.2273C9.65807 15.2782 9.5625 15.3271 9.46591 15.3739C9.40405 15.4033 9.34094 15.43 9.27675 15.4539C9.26091 15.4589 9.23508 15.4673 9.20175 15.4756C9.0695 15.5077 8.93149 15.5077 8.79925 15.4756C8.74761 15.4634 8.69631 15.4466 8.64758 15.4256C8.60935 15.4094 8.57156 15.3922 8.53425 15.3739C8.43767 15.3271 8.34209 15.2782 8.24758 15.2273C7.93931 15.0616 7.63585 14.887 7.33758 14.7039C6.40306 14.1337 5.51051 13.4973 4.66675 12.7998C3.70258 11.9964 2.71508 11.0206 1.96425 9.91394C1.21341 8.80894 0.666748 7.52727 0.666748 6.13311Z"
+                fill="#939393"
+            />
+        </symbol>
+        <symbol id="commentary" viewBox="0 0 18 18">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.00326 2.33317C7.8684 2.33278 6.75223 2.6221 5.76045 3.17372C4.76868 3.72535 3.93414 4.52103 3.33588 5.48539C2.73762 6.44975 2.39544 7.55087 2.34175 8.68446C2.28807 9.81806 2.52465 10.9466 3.0291 11.9632C3.27243 12.4532 3.26076 13.0523 3.2091 13.5182C3.15326 14.0232 3.02576 14.5607 2.88993 15.0373C2.8266 15.2582 2.76076 15.4707 2.69576 15.6665H9.00326C10.7714 15.6665 12.4671 14.9641 13.7173 13.7139C14.9676 12.4636 15.6699 10.7679 15.6699 8.99984C15.6699 7.23173 14.9676 5.53603 13.7173 4.28579C12.4671 3.03555 10.7714 2.33317 9.00326 2.33317ZM0.734929 16.179L0.736596 16.174L0.746596 16.1507C0.80649 16.0044 0.86317 15.8569 0.916596 15.7082C1.02493 15.4123 1.16493 15.0098 1.28743 14.5807C1.40902 14.1729 1.49764 13.756 1.55243 13.334C1.57326 13.1482 1.57743 12.9948 1.56826 12.8773C1.56525 12.833 1.55885 12.789 1.5491 12.7457C1.54243 12.7165 1.5366 12.704 1.5366 12.704C0.964885 11.553 0.668207 10.285 0.669929 8.99984C0.669929 4.39734 4.40076 0.666504 9.00326 0.666504C13.6058 0.666504 17.3366 4.39734 17.3366 8.99984C17.3366 13.6023 13.6058 17.3332 9.00326 17.3332H1.50326C1.36614 17.3331 1.23115 17.2992 1.11026 17.2345C0.989375 17.1698 0.886321 17.0763 0.810242 16.9622C0.734163 16.8481 0.687409 16.717 0.674126 16.5806C0.660843 16.4441 0.681442 16.3064 0.734096 16.1798L0.734929 16.179ZM4.83326 7.74984C4.83326 7.52882 4.92106 7.31686 5.07734 7.16058C5.23362 7.0043 5.44558 6.9165 5.6666 6.9165H12.3333C12.5543 6.9165 12.7662 7.0043 12.9225 7.16058C13.0788 7.31686 13.1666 7.52882 13.1666 7.74984C13.1666 7.97085 13.0788 8.18281 12.9225 8.33909C12.7662 8.49537 12.5543 8.58317 12.3333 8.58317H5.6666C5.44558 8.58317 5.23362 8.49537 5.07734 8.33909C4.92106 8.18281 4.83326 7.97085 4.83326 7.74984ZM4.83326 11.0832C4.83326 10.8622 4.92106 10.6502 5.07734 10.4939C5.23362 10.3376 5.44558 10.2498 5.6666 10.2498H8.1666C8.38761 10.2498 8.59957 10.3376 8.75585 10.4939C8.91213 10.6502 8.99993 10.8622 8.99993 11.0832C8.99993 11.3042 8.91213 11.5161 8.75585 11.6724C8.59957 11.8287 8.38761 11.9165 8.1666 11.9165H5.6666C5.44558 11.9165 5.23362 11.8287 5.07734 11.6724C4.92106 11.5161 4.83326 11.3042 4.83326 11.0832Z"
+                fill="#939393"
+            />
+        </symbol>
+    </svg>
+    <body>
+        <main>
+            <section class="breadCrumbs">
+                <div class="breadCrumbsItem">
+                    <div class="title">ТВОЙ ДОМ 77</div>
+                    <img
+                        class="breadCrumbsIcon"
+                        src="assets/images/svg/arrow.svg"
+                        alt=""
+                    />
+                </div>
+                <div class="breadCrumbsItem">
+                    <div class="title">ТВОЙ ДОМ 77</div>
+                    <img
+                        class="breadCrumbsIcon"
+                        src="assets/images/svg/arrow.svg"
+                        alt=""
+                    />
+                </div>
+            </section>
+            <section class="blogMain">
+                <div class="container">
+                    <div class="blogHeaderTop">
+                        <button class="backToLink">
+                            <a href="#">
+                                <div class="arrow">
+                                    <img
+                                        src="assets/images/svg/arrow.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="title">Назад</div>
+                            </a>
+                        </button>
+                        <div class="blogTitle">Блог</div>
+                    </div>
+                    <div class="blogHeader">
+                        <div class="blogHeaderLeft">
+                            <button class="blogHeaderLeftButton active">
+                                <svg class="blogHeaderButtonSvg">
+                                    <use xlink:href="#article" />
+                                </svg>
+                                <div class="title">Статьи</div>
+                            </button>
+                            <button class="blogHeaderLeftButton">
+                                <svg class="blogHeaderButtonSvg">
+                                    <use xlink:href="#video" />
+                                </svg>
+                                <div class="title">Видео</div>
+                            </button>
+                            <button class="blogHeaderLeftButton">
+                                <svg class="blogHeaderButtonSvg">
+                                    <use xlink:href="#photo" />
+                                </svg>
+                                <div class="title">Фото</div>
+                            </button>
+                        </div>
+                        <div class="blogHeaderRight">
+                            <button class="buttonLeft">
+                                <svg>
+                                    <use xlink:href="#arrow" />
+                                </svg>
+                            </button>
+                            <div class="blogHeaderRightInner">
+                                <div class="item">Комнаты</div>
+                                <div class="item">Помещения</div>
+                                <div class="item">Здания</div>
+                                <div class="item">Поселки</div>
+                                <div class="item">Архитектура</div>
+                                <div class="item">Стили</div>
+                                <div class="item">История</div>
+                            </div>
+
+                            <button class="buttonRight">
+                                <svg>
+                                    <use xlink:href="#arrow" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="blogInner">
+                        <div class="blogInnerContent">
+                            <div class="blogInnerIntro">
+                                <img
+                                    src="assets/images/blogImages/blogImage1.jpg"
+                                    alt=""
+                                    class="blogInnerIntroImage"
+                                />
+                                <div class="tag">Малогабритная квартира</div>
+                                <div class="title">
+                                    Яркая душка 42.6 м2 в старом фонде (фото до
+                                    и после)
+                                </div>
+                                <div class="subtitle">
+                                    С другой стороны новая модель
+                                    организационной деятельности в значительной
+                                    степени обуславливает создание системы
+                                    обучения кадров, соответствует насущным
+                                    потребностям.
+                                </div>
+                            </div>
+                            <div class="blogInnerContentItems">
+                                <a href="# " class="blogInnerContentItem">
+                                    <img
+                                        src="assets/images/blogImages/blogImage2.jpg"
+                                        alt=""
+                                        class="blogInnerContentItemImage"
+                                    />
+                                    <div class="text">
+                                        <div class="tag">
+                                            Малогабритная квартира
+                                        </div>
+                                        <div class="title">
+                                            Яркая душка 42.6 м2 в старом фонде
+                                            (фото до и после)
+                                        </div>
+
+                                        <div class="reactions">
+                                            <div class="views">
+                                                <svg class="reactionsIcon">
+                                                    <use xlink:href="#view" />
+                                                </svg>
+                                                <div class="count">2 829</div>
+                                            </div>
+                                            <div class="likes">
+                                                <svg
+                                                    class="reactionsIcon reactionsIconLike"
+                                                >
+                                                    <use xlink:href="#like" />
+                                                </svg>
+                                                <div class="count">23</div>
+                                            </div>
+                                            <div class="commentaries">
+                                                <svg class="reactionsIcon">
+                                                    <use
+                                                        xlink:href="#commentary"
+                                                    />
+                                                </svg>
+                                                <div class="count">5</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="# " class="blogInnerContentItem">
+                                    <img
+                                        src="assets/images/blogImages/blogImage2.jpg"
+                                        alt=""
+                                        class="blogInnerContentItemImage"
+                                    />
+                                    <div class="text">
+                                        <div class="tag">
+                                            Малогабритная квартира
+                                        </div>
+                                        <div class="title">
+                                            Яркая душка 42.6 м2 в старом фонде
+                                            (фото до и после)
+                                        </div>
+
+                                        <div class="reactions">
+                                            <div class="views">
+                                                <svg class="reactionsIcon">
+                                                    <use xlink:href="#view" />
+                                                </svg>
+                                                <div class="count">2 829</div>
+                                            </div>
+                                            <div class="likes">
+                                                <svg
+                                                    class="reactionsIcon reactionsIconLike"
+                                                >
+                                                    <use xlink:href="#like" />
+                                                </svg>
+                                                <div class="count">23</div>
+                                            </div>
+                                            <div class="commentaries">
+                                                <svg class="reactionsIcon">
+                                                    <use
+                                                        xlink:href="#commentary"
+                                                    />
+                                                </svg>
+                                                <div class="count">5</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blogInnerIntroBottom">
+                                <div class="showMore">Показать ещё</div>
+
+                                <div class="pagination">
+                                    <button class="paginationBack">
+                                        <svg>
+                                            <use xlink:href="#arrow" />
+                                        </svg>
+                                    </button>
+                                    <button class="paginationItem active">
+                                        1
+                                    </button>
+                                    <button class="paginationItem">2</button>
+                                    <button class="paginationItem">3</button>
+                                    <button class="paginationItem">...</button>
+                                    <button class="paginationItem">282</button>
+                                    <button class="paginationItem">283</button>
+                                    <button class="paginationNext">
+                                        <svg>
+                                            <use xlink:href="#arrow" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blogInnerPopular">
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="blogInnerContentItem popular">
+                                <img
+                                    src="assets/images/blogImages/blogImage2.jpg"
+                                    alt=""
+                                    class="blogInnerContentItemImage"
+                                />
+                                <div class="text">
+                                    <div class="title">
+                                        Яркая душка 42.6 м2 в старом фонде (фото
+                                        до и после)
+                                    </div>
+
+                                    <div class="reactions">
+                                        <div class="views">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#view" />
+                                            </svg>
+                                            <div class="count">2 829</div>
+                                        </div>
+                                        <div class="likes">
+                                            <svg
+                                                class="reactionsIcon reactionsIconLike"
+                                            >
+                                                <use xlink:href="#like" />
+                                            </svg>
+                                            <div class="count">23</div>
+                                        </div>
+                                        <div class="commentaries">
+                                            <svg class="reactionsIcon">
+                                                <use xlink:href="#commentary" />
+                                            </svg>
+                                            <div class="count">5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
